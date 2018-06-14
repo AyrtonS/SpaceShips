@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 176412210}
   - component: {fileID: 176412211}
   - component: {fileID: 176412212}
+  - component: {fileID: 176412213}
   m_Layer: 0
   m_Name: nave
   m_TagString: Untagged
@@ -245,6 +246,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.94, y: 3.47}
   m_EdgeRadius: 0
+--- !u!114 &176412213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 176412207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a63a3714d94ed489cfdf4dd792f0e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &255346227
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +465,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10

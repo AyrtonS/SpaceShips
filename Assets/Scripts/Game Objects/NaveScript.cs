@@ -15,8 +15,9 @@ public class NaveScript : MonoBehaviour {
 		eixoy = Input.GetAxis ("Vertical");
 	}
 	void FixedUpdate(){
-		print (eixox);
+		print ("eixo x"+eixox);
 		print (eixoy);
-		nave.velocity = new Vector2 (nave.velocity.x * eixox,nave.velocity.y* eixoy);
-	}	
+		nave.velocity = new Vector2 (Time.deltaTime * 100 * eixox, Time.deltaTime * 100 *eixoy);
+        
+    }	
 }
