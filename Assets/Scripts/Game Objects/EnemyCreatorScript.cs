@@ -25,7 +25,7 @@ public class EnemyCreatorScript : MonoBehaviour {
         {
             GameObject e = Instantiate(enemies[Random.Range(0,4)],new Vector2(Random.Range(-6, 10), gameObject.transform.position.y),gameObject.transform.rotation);
            
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 

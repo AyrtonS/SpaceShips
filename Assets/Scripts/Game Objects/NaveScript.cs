@@ -6,6 +6,7 @@ public class NaveScript : MonoBehaviour {
 	Rigidbody2D nave;
 	float eixox;
 	float eixoy;
+    public GameObject shot; 
 	void Start () {
 		nave = GetComponent<Rigidbody2D> ();
 	}
@@ -13,6 +14,7 @@ public class NaveScript : MonoBehaviour {
 	void Update () {
 		eixox = Input.GetAxis ("Horizontal");
 		eixoy = Input.GetAxis ("Vertical");
+        
 	}
 	void FixedUpdate(){
 		print ("eixo x"+eixox);

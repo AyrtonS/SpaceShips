@@ -295,8 +295,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Game Objects\EnemyCreatorScript.cs" />
+    <Compile Include="Assets\Scripts\Game Objects\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\Game Objects\EnemySpaceshipScript.cs" />
     <Compile Include="Assets\Scripts\Game Objects\NaveScript.cs" />
+    <Compile Include="Assets\Scripts\Game Objects\ShotGeneratorScript.cs" />
+    <Compile Include="Assets\Scripts\Game Objects\ShotScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
