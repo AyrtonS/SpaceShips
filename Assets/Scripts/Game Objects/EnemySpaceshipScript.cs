@@ -16,4 +16,5 @@ public class EnemySpaceshipScript : MonoBehaviour {
     {
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * speed *Time.deltaTime);
     }
+
 }
