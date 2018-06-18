@@ -310,6 +310,7 @@
     <Compile Include="Assets\Scripts\Game Objects\ShotGeneratorScript.cs" />
     <Compile Include="Assets\Scripts\Game Objects\ShotScript.cs" />
     <Compile Include="Assets\Scripts\GameController\GameController.cs" />
+    <Compile Include="Assets\Scripts\GameController\PlayerManaging\PlayerManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

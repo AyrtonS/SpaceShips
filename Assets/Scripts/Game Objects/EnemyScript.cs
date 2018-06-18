@@ -19,7 +19,8 @@ public class EnemyScript : MonoBehaviour {
 
     private void OnDestroy()
     {
-        
+        PlayerManager.playerKills += 1;
+        print(PlayerManager.playerKills);
     }
 
 }
