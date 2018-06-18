@@ -274,6 +274,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>C:/Users/Gilberto/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Gilberto/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -294,12 +297,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Game Objects\BigBossScript.cs" />
+    <Compile Include="Assets\Scripts\Game Objects\Enemy1.cs" />
+    <Compile Include="Assets\Scripts\Game Objects\Enemy2.cs" />
+    <Compile Include="Assets\Scripts\Game Objects\EnemyAsteroide.cs" />
     <Compile Include="Assets\Scripts\Game Objects\EnemyCreatorScript.cs" />
+    <Compile Include="Assets\Scripts\Game Objects\EnemyFighter.cs" />
     <Compile Include="Assets\Scripts\Game Objects\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\Game Objects\EnemySpaceshipScript.cs" />
     <Compile Include="Assets\Scripts\Game Objects\NaveScript.cs" />
+    <Compile Include="Assets\Scripts\Game Objects\NaveScriptHealth.cs" />
     <Compile Include="Assets\Scripts\Game Objects\ShotGeneratorScript.cs" />
     <Compile Include="Assets\Scripts\Game Objects\ShotScript.cs" />
+    <Compile Include="Assets\Scripts\GameController\GameController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

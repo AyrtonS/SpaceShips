@@ -24,11 +24,13 @@ public class EnemySpaceshipScript : MonoBehaviour {
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * speed *Time.deltaTime);
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("killerWall")) {
             Destroy(gameObject);
         }
     }
+
 
 }
