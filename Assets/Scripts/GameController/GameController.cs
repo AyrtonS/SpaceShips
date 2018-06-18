@@ -35,10 +35,8 @@ public class GameController : MonoBehaviour
 
 	public void NaveScored(int score)
 	{
-		if (gameOver)   
-			return;
 		scoreNave+=score;
-		scoreText.text = "Score: " + scoreNave.ToString();
+		scoreText.text ="Score: "+ scoreNave.ToString();
 	}
 	public void DyingNave(int scoreDie){
 		lifeNave -= scoreDie;
@@ -53,9 +51,8 @@ public class GameController : MonoBehaviour
 	}
 	public void NaveDied()
 	{
-		//Activate the game over text.
 		gameOvertext.SetActive (true);
-		//Set the game to be over.
 		gameOver = true;
+
 	}
 }

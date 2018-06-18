@@ -7,7 +7,6 @@ public class NaveScript : MonoBehaviour {
 	float eixox;
 	float eixoy;
     public GameObject shot; 
-	NaveScriptHealth naveScriptHealth;
 
 	void Start () {
 		nave = GetComponent<Rigidbody2D> ();
@@ -20,55 +19,25 @@ public class NaveScript : MonoBehaviour {
         
 	}
 	void FixedUpdate(){
-		print ("eixo x"+eixox);
-		print (eixoy);
 		nave.velocity = new Vector2 (Time.deltaTime * 100 * eixox, Time.deltaTime * 100 *eixoy);
 		if(GameController.instance.diedNave == true){
 			GameController.instance.NaveDied ();
 		}
 	}	
-
-	void OnTriggerEnter2D(Collider2D other)
+	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(other.gameObject.CompareTag ("Asteroid"))
+		if (collision.gameObject.layer == 8)
 		{
-			if(naveScriptHealth.currentHealth > 0)
-			{
-				naveScriptHealth.TakeDamage (1);
-			}
-			GameController.instance.DyingNave(1);
-		}
-		if (other.gameObject.CompareTag ("FireFighter")) 
-		{
-			if(naveScriptHealth.currentHealth > 0)
-			{
-				naveScriptHealth.TakeDamage (3);
-			}
+			Destroy (collision.gameObject);
 			GameController.instance.DyingNave (3);
+			NaveScriptHealth.instance.TakeDamage (3);
+
+
 		}
-		if (other.gameObject.CompareTag ("FireEnemy1")) 
-		{
-			if(naveScriptHealth.currentHealth > 0)
-			{
-				naveScriptHealth.TakeDamage (5);
-			}
-			GameController.instance.DyingNave (5);
-		}
-		if (other.gameObject.CompareTag ("FireEnemy2")) 
-		{
-			if(naveScriptHealth.currentHealth > 0)
-			{
-				naveScriptHealth.TakeDamage (7);
-			}
-			GameController.instance.DyingNave (7);
-		}
-		if (other.gameObject.CompareTag ("FireBigBoss")) 
-		{
-			if(naveScriptHealth.currentHealth > 0)
-			{
-				naveScriptHealth.TakeDamage (15);
-			}
-			GameController.instance.DyingNave (15);
+		if(collision.gameObject.layer == 9){
+			Destroy (collision.gameObject);
+			GameController.instance.DyingNave (1);
+			NaveScriptHealth.instance.TakeDamage (1);
 		}
 	}
 }

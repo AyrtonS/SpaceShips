@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class NaveScriptHealth : MonoBehaviour {
+	public static NaveScriptHealth instance;
 	public int startingHealth = 60;                            // The amount of health the player starts the game with.
 	public int currentHealth;                                   // The current health the player has.
 	public Slider healthSlider;                                 // Reference to the UI's health bar.
@@ -16,6 +17,10 @@ public class NaveScriptHealth : MonoBehaviour {
 	void Awake ()
 	{
 		currentHealth = startingHealth;
+		if (instance == null)
+			instance = this;
+		else if(instance != this)
+			Destroy (gameObject);
 	}
 
 	void Update ()
@@ -37,6 +42,7 @@ public class NaveScriptHealth : MonoBehaviour {
 		damaged = true;
 		currentHealth -= amount;
 		healthSlider.value = currentHealth;
+		print (healthSlider.value);
 		if(currentHealth <= 0 && !isDead)
 		{
 			Death ();
@@ -46,6 +52,7 @@ public class NaveScriptHealth : MonoBehaviour {
 	void Death ()
 	{
 		isDead = true;
+		GameController.instance.NaveDied ();
 		print ("MORREU");
 	}       
 }

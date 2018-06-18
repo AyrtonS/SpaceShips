@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Enemy1 : MonoBehaviour {
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if(other.gameObject.CompareTag ("FireNave"))
-		{
-			Destroy(gameObject);
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.tag == "FireNave") {
 			GameController.instance.NaveScored (7);
 		}
 	}

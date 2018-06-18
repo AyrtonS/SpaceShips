@@ -29,15 +29,16 @@ public class ShotScript : MonoBehaviour {
     {
         if (collision.gameObject.layer == 8)
         {
-            
-           
               Destroy(gameObject);
               Destroy(collision.gameObject);
-          
-            
-
-
+			  GameController.instance.NaveScored (7);
+			 
         }
+		if(collision.gameObject.layer == 9){
+			Destroy (gameObject);
+			Destroy (collision.gameObject);
+			GameController.instance.NaveScored (1);
+		}
     }
 
 }
